@@ -1,0 +1,519 @@
+@charset "UTF-8";
+
+/* ===============================
+共通
+==================================*/
+/* *{
+    border: 1px solid black;
+} */
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #000;
+    /* font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium",
+    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; */
+    letter-spacing: 0.1em;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    background-color: #333;
+    width: 80px;
+    height: 3px;
+    top: 70px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 200px auto;
+}
+
+/* ===============================
+ヘッダー
+==================================*/
+header {
+    margin: 0 auto;
+    padding: 0 7%;
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header .site-title img {
+    width: 200px;
+}
+
+.header-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-navi {
+    display: flex;
+}
+
+.site-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.site-list li {
+    padding: 0 10px;
+}
+
+.burger {
+    display: none;
+}
+
+
+/* ===============================
+メインビジュアル
+==================================*/
+main {
+    margin-top: 80px;
+}
+
+.mainvisual {
+    position: relative;
+    margin-bottom: 200px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pc-mainvisual {
+    display: block !important; 
+}
+
+.sp-mainvisual {
+    display: none !important; 
+}
+
+.mainvisual img {
+    width: 100%;
+}
+
+.mainvisual-text {
+    position: absolute;
+    top: 18%;
+    left: 8%;
+    font-size: 3rem;
+}
+
+
+/* ===============================
+プロフィール
+==================================*/
+.profile-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-left {
+    width: 45%;
+    text-align: center;
+    padding: 0 0 0 20%;
+}
+
+.profile-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-btn {
+    margin-top: 30px;
+}
+
+
+.profile-left h3 {
+    margin-bottom: 40px;
+}
+
+
+.profile-right {
+    width: 45%;
+}
+
+
+/* ===============================
+ギャラリー
+==================================*/
+.gallery-box {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-left-item , .gallery-right-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.galleru-box img {
+    padding: 10px;
+}
+
+
+/* ===============================
+contact
+==================================*/
+#contact button {
+    margin: 0 auto;
+}
+
+#contact a {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #fffcf4;
+    position: relative;
+}
+
+#contact a::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid #8B9143;
+    border-right: 3px solid #8B9143;
+    transform: rotate(45deg);
+    top: 30%;
+    right: 10%;
+}
+
+
+/* ===============================
+フッター
+==================================*/
+footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
+}
+
+.footer-item {
+    max-width: 400px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-icon {
+    max-width: 150px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    text-align: center;
+}
+
+
+/* ===============================
+プロフィールページ
+==================================*/
+.profilepage {
+    max-width: 100%;
+    max-width: 1000px;
+    margin: 80px auto 80px auto;
+}
+
+.profilepage-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profilepage-img {
+    width: 39%;
+}
+
+.profilepage-text {
+    width: 60%;
+    align-items: center;
+}
+
+.profilepage-text p {
+    margin-bottom: 20px;
+}
+
+.profilepage-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ===============================
+お問い合わせフォーム
+==================================*/
+h5 {
+    font-size: 2.5rem;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.contactform-item {
+    display: flex;
+}
+
+.contactform dd , .contactform dt {
+    display: inline-block;
+}
+
+.contactform dt {
+    width: 210px;
+    margin-bottom: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    background-color: #8B9143;
+}
+
+.contactform dd {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    background-color: #fff;
+    border: 1px solid #8B9143;
+    width: 800px;
+}
+
+.submitbtn {
+    display: block;
+    text-align: center;
+}
+
+.submitbtn input {
+    display: inline-block;
+    width: 150px;
+    padding: 20px 30px;
+    background-color: #8B9143;
+    color: #fff;
+    text-align: center;
+}
+
+.submitbtn input:hover {
+    opacity: 0.5;
+}
+
+.contactform-item input ,
+.contactform-item textarea {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* ===============================
+
+sp
+
+==================================*/
+@media (max-width: 800px) {
+
+    /* ヘッダー */
+    .header-contents {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #navi {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        z-index: 20;
+        background-color: #121212;
+        color: #fff;
+        width: 300px;
+        padding: 60px 25px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        opacity: 0;
+    }
+    
+    .site-list {
+        display: block;
+    }
+    
+    .open #navi {
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s;
+    }
+    
+    #navi a {
+        color: #fff;
+    }
+    
+    .site-list li {
+        border-top: 1px solid #fff;
+        &:last-child {
+        border-bottom: 1px solid #fff;
+        }
+        padding: 30px 0;
+    }
+
+    .burger {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        z-index: 20;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    
+    .burger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        transition: all 0.5s;
+        position: absolute;
+        &:nth-child(1) {
+        top: 22%;
+        }
+        &:nth-child(2) {
+        top: 50%;
+        }
+        &:nth-child(3) {
+        top: 78%;
+        }
+    }
+    
+    .open .burger span {
+        background-color: #fff;
+    }
+    .open .burger span:nth-child(1) {
+        top: 50%;
+        -webkit-transform:rotate(-315deg);
+        transform:rotate(-315deg);
+    }
+    .open .burger span:nth-child(2) {
+        opacity: 0;
+    }
+    .open .burger span:nth-child(3) {
+        top: 50%;
+        -webkit-transform:rot
+        ate(315deg);
+        transform:  rotate(315deg);
+    }
+    
+    #mask {
+        display: none;
+        transition: all 0.5s;
+    }
+    
+    .open #mask {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.8;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    /* メインビジュアル */
+    .pc-mainvisual {
+        display: none !important;
+    }
+
+    .sp-mainvisual {
+        display: block !important ;
+        height: 90vh;
+    }
+
+    .mainvisual-text {
+        font-size: 2rem;
+    }
+
+    /* プロフィール */
+    .profile-box {
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+
+    .profile-left {
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile-right {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .profile-right img {
+        width: 100%;
+    }
+    
+    /* ギャラリー */
+    .gallery-box {
+        flex-direction: column;
+    }
+
+    .gallery-box img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .gallery-left-item {
+        justify-content: none;
+        flex-direction: column;
+    }
+
+    .gallery-right-item {
+        justify-content: none;
+        flex-direction: column;
+    }
+}
